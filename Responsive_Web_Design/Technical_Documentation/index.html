@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAGE_TITLE_HERE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="navbar">
+      <header>
+        C++ Documentation
+      </header>
+      <a href="#LIBRARIES_AND_NAMESPACES" class="nav-link">Libraries and Namespaces</a>
+      <a href="#VARIABLES" class="nav-link">Variables</a>
+      <a href="#INPUT_AND_OUTPUT" class="nav-link">Input and output</a>
+      <a href="#CONTROL_STRUCTURES" class="nav-link">Control structures</a>
+      <a href="#PUTTING_IT_ALL_TOGETHER" class="nav-link">Putting it all together</a>
+
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="LIBRARIES_AND_NAMESPACES">
+      <header>
+        Libraries and Namespaces
+      </header>
+
+      <div class="content">
+        <p>Many C++ programs use code from the standard libraries. Using code from libraries allows you to save time, without having to rewrite code that's already been written.</p><br><br>
+        <p>To include libraries in our C++ program, use <code>#include</code>. For example, to include the <code>iostream library</code>, which allows use to manipulate standard input and ouput, use the following:</p><br>
+        <pre>
+          <code>
+            #include &lt;iostream&gt;
+          </code>
+        </pre>
+        <p>Now we can use commands such as cin and cout.</p>
+
+        <br><br><p>In addition to including libraries, namespaces are usually included at the top of the program. A common namespace that's used is <code>std</code>:</p>
+
+        <pre>
+          <code>
+            using namespace std;
+          </code>
+        </pre>
+        <p>We'll touch back in this in a bit, but for now, just keep in mind how using a namespace can save time, allowing us to not have to type common namespaces before commands.</p>
+      </div>
+    </section>
+
+    <section class="main-section" id="VARIABLES">
+      <header>
+        Variables
+      </header>
+
+      <div class="content">
+        <p>n programming, variables allow you to store values. In C++, there are two types of variables: user-defined and standard variables. Standard variables are already defined by the C++ language, and have six main types:</p>
+
+        <ul>
+            <li>int x; //integer value</li>
+            <li>float fl; //single-precision decimal value</li>
+            <li>double dl; //double-precision decimal value</li>
+            <li>char ch; //single character value</li>
+            <li>string str; //multiple characters value</li>
+            <li>bool bl; //boolean(true or false) values</li>
+        </ul>
+
+        <p>Float and double variables are able to store int values. However, the inverse isn't true.</p><br><br>
+
+        <p>Assigning variables is as simple as using the <code>=</code> operator, which assigns the value on the left to the variable on the right:</p>
+        <pre>
+          <code>
+            int x; //declare an integer variable
+            x = 10; //define the variable by setting it to a value of 10
+          </code>
+        </pre>
+        <p>Be careful you don't mix up the <code>=</code> operator with the <code>==</code> operator, which checks for equality. We'll cover this operator in the control structure section.</p>
+
+      </div>
+    </section>
+
+    <section class="main-section" id="INPUT_AND_OUTPUT">
+      <header>
+        Input and Output
+      </header>
+
+      <div class="content">
+        <p>As mentioned before, the <code>iostream</code> library contains standard input and output code. This library includes the <code>cin</code> and <code>cout</code> commands. Usually, we have to prepend these commands with <code>std::</code>. However, because we used the <code>std</code> namespace, as mentioned earlier, we don't have to prepend these commands.</p><br><br>
+        <p>Inputting consists of calling <code>cin</code> and the extraction operator &gt;&gt;.</p>
+
+        <pre> <code>
+          cin &gt;&gt; x; //stores input from user into variable x
+        </code> </pre>
+        <p>On the other hand, output is rather similar, with calling <code>cout</code> and the insertion operator &lt;&lt;.</p>
+        <pre> <code>
+          cout &lt;&lt; x; //outputs the value stored in variable x
+        </code> </pre>
+
+      </div>
+    </section>
+
+    <section class="main-section" id="CONTROL_STRUCTURES">
+      <header>
+        Control Structures
+      </header>
+
+      <div class="content">
+        <p>Control structures in programming allow you to control when specific are carried out, once certain conditions are met. The most common control structure is the <code>if</code> statement:</p>
+
+        <pre> <code>
+          if(condition)
+          {
+            //some commands
+          }
+        </code> </pre>
+        <p>The condition is a boolean statement, in which the commands in the <code>if</code> will run if it's true. Otherwise, the <code>if</code> block will be skipped. Here's where the <code>==</code> operator comes in play. Here's an example of this operator:</p>
+
+      <pre>
+        <code>
+          if(x == 5)
+          {
+            cout &lt;&lt; "Variable x is 5!" << endl; //endl outputs a newline
+          }
+      </code></pre>
+        <br><p>In the above code block, the output will only run if the variable x has a value of 5.</p>
+      </div>
+    </section>
+
+    <section class="main-section" id="PUTTING_IT_ALL_TOGETHER">
+      <header>
+        Putting it all together
+      </header>
+
+      <div class="content">
+        <p>Now we can put together a C++ program with what we've covered so far. One last topic to touch on is the <code>main()</code> function. Every C++ program has a <code>main()</code> function, which defines the driver code to the program. It has a return type of int, and we usually return 0 at the end of the function.</p>
+
+        <br><br>
+        <pre><code>
+          #include <iostream> //include library
+          using namespace std; //include std namespace
+
+          int main()
+          {
+            int x;
+
+            cout << "Enter a number: ";
+            cin >> x;
+
+            if(x == 5)
+            {
+              cout << "Hello World!" << endl;
+            }
+
+            return 0;
+          }
+        </code></pre>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  text-align: center;
+
+}
+
+header {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.main-section {
+  margin-left: 22%;
+}
+
+.main-section header {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#navbar header {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+a:visited {
+  color: black;
+}
+
+.nav-link {
+  border-top: 2px solid #bbb;
+  padding: 10px 0px;
+}
+
+.content {
+  margin-left: 2%;
+  margin: 20px;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  width: 90%;
+  white-space: pre-wrap;
+  padding: 0px;
+}
+
+pre {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 2%;
+}
+
+li {
+  margin-left: 20px;
+}
+
+@media (max-width: 1000px)
+{
+  #navbar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    position: static;
+  }
+}
