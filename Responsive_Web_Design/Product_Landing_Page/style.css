@@ -1,0 +1,156 @@
+body {
+  background-color: rgba(191, 191, 63, 0.2);
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background-color: #F2F2D7;
+  opacity: 1;
+  z-index: 9999;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: black;
+  padding: 50px;
+  font-size: 30px;
+}
+#nav-bar {
+  padding: 30px 0px;
+  margin-left: auto;
+}
+
+#works {
+  display: flex;
+  justify-content: center;
+}
+
+#subscribe {
+  text-align: center;
+  margin: 100px;
+  margin-bottom: 50px;
+}
+#email input{
+   width: 20%;
+}
+
+#form #submit {
+  padding: 0px 15px;
+  margin: 20px 0px;
+  background-color: rgb(217, 223, 52);
+  font-family: "Courier New";
+  border-radius: 10px;
+}
+
+#subscribe p{
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25%;
+
+  margin-bottom: 75px;
+}
+
+.feature img {
+  width: 7%;
+  height: auto;
+}
+
+.featureDescription {
+  margin-left: 100px;
+  font-size: 25px;
+}
+
+.featureDescription .description {
+  font-size: 15px;
+}
+
+#pricing {
+  display: flex;
+  justify-content: center;
+
+  margin: 50px 0px;
+}
+
+.purchaseOption {
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 10px;
+  width: 20%;
+  height: 350px;
+
+  text-align: center;
+}
+
+.priceHeader {
+  background-color: rgba(195, 192, 192, 0.5);
+  font-size: 20px;
+  padding: 15px;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic img {
+  width: 50%;
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px 17%;
+  padding: 10px;
+
+  background-color: rgba(195, 192, 192, 0.5);
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLinks a{
+  font-size: 20px;
+  padding: 5px;
+  color: #000080;
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+@media (max-width: 50%)
+{
+  #pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
