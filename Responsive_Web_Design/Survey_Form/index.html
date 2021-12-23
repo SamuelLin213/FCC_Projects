@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCR Survey</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 id="title">UCR Survey Form</h1>
+  <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+  <div id="form">
+    <form id="survey-form">
+      <div class="question">
+        <label id="name-label">Name<br></label>
+        <input type="text" placeholder="Enter your name" required id="name">
+      </div>
+      <div class="question">
+        <label id="number-label">Grade Level(1-6, 0 if not applicable)<br></label>
+        <input type="number" placeholder="Enter your grade level" required id="number" min="0" max="6">
+      </div>
+      <div class="question">
+        <label id="email-label">Email<br></label>
+        <input type="email" placeholder="Enter your email" id="email" required>
+      </div>
+      <label for="role"class="question">Which option best describes your current role?<br></label>
+      <select name="role"  id="dropdown">
+        <option value="undergrad">Undergraduate Student</option>
+        <option value="grad">Graduate Student</option>
+        <option value="professor">Professor</option>
+        <option value="TA">Teaching Assistant</option>
+        <option value="otherFac">Other Faculty</option>
+      </select>
+
+      <div class="question radio">
+        Would you recommend UCR to a friend?<br>
+        <input type="radio" name="recommend" id="definitely" required value="definitely">
+<label for="definitely">Definitely</label><br>
+        <input type="radio" name="recommend" id="maybe" value="maybe">
+<label for="maybe">Maybe</label><br>
+        <input type="radio" name="recommend" id="unsure" value="maybe">
+<label for="unsure">Not Sure</label><br>
+      </div>
+
+      <div class="question checkbox">
+        Which part(s) of UCR could be improved?<br>
+        <input type="checkbox" name="improve" id="academics" required value="academics">
+<label for="academics">Academics</label><br>
+        <input type="checkbox" name="improve" id="diversity" value="diversity">
+<label for="diversity">Diversity</label><br>
+        <input type="checkbox" name="improve" id="campus" value="campus">
+<label for="campus">Campus</label><br>
+        <input type="checkbox" name="improve" id="athletics" value="athletics">
+<label for="athletics">Athletics</label><br>
+        <input type="checkbox" name="improve" id="party" value="party">
+<label for="party">Party Scene</label><br>
+      </div>
+
+      <label for="comment">Any comments or suggestions?</label>
+<textarea id="comment" name="comment"=>Enter your comments here...</textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
