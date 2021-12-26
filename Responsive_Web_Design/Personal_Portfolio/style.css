@@ -1,0 +1,159 @@
+a {
+  text-decoration: none;
+  padding: 0px 20px;
+  font-size: 175%;
+  color: black;
+}
+a.visited {
+  color: black;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  background-color: rgb(63, 127, 191);
+  padding: 20px 0px;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.title {
+  text-align: center;
+  font-size: 300%;
+}
+
+#welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+
+  background: url("https://videohive.img.customer.envatousercontent.com/files/227714272/Binary%20Code%20Background%20%2001_preview1.JPG?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=4ac645f9f3c974f81fa45c4e85ebcaf1") rgba(191, 63, 63, 0.7);
+
+  background-size:cover;
+  background-blend-mode: multiply;
+}
+
+.description {
+  font-family: cursive;
+  width: 40%;
+  text-align: center;
+  margin: 15px;
+}
+
+#projects {
+  background-color: rgb(249, 249, 224);
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+
+  padding-bottom: 100px;
+}
+
+.language {
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+}
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.languages {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.projectShowcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 100px;
+}
+
+.project-tile {
+  padding: 0% 5%;
+  font-size: 0px;
+  height: 300px;
+}
+
+.projectImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  margin: none;
+  padding: none;
+}
+
+.projectName {
+  font-size: 25px;
+  font-weight: 0;
+  display: inline-block;
+
+  background-color: rgba(63, 127, 191, 0.6);
+  width: 100%;
+  height: 15%;
+  margin-left: 20px;
+  padding: 20px 0px;
+}
+
+.project-tile .titleHover {
+  display: inline;
+  color: red;
+  font-weight: 900;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.project-tile:hover .titleHover {
+  opacity: 1;
+}
+
+.contact {
+  background-color: #202937;
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px 20px 0px;
+}
+
+.social{
+  font-size: 30px;
+  color: white;
+  transition: font-size 0.7s;
+}
+
+.social:hover{
+  font-size: 35px;
+}
+
+@media (max-width: 800px)
+{
+  .projectShowcase {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
