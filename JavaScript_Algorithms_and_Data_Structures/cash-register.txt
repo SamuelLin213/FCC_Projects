@@ -1,0 +1,66 @@
+function checkCashRegister(price, cash, cid) {
+  let amount = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
+  let change = cash - price;
+  let insuff = false;
+  let closed = true;
+  let tempArr = cid.map(a => ([a[0], 0]));
+
+  let tempCng = change;
+  for(let x = cid.length-1; x >= 0; x--)
+  {
+    if(amount[x] <= tempCng && cid[x][1] > 0)
+    {
+      let numAmt = Math.floor(tempCng / amount[x]);
+      
+      if(numAmt * amount[x] > cid[x][1])
+      {
+        numAmt = cid[x][1]/amount[x];
+      }
+
+      tempCng -= Math.round(numAmt * amount[x] * 100)/100;
+      tempCng = tempCng.toFixed(2);
+      
+      cid[x][1] -= amount[x] * numAmt;
+
+      // adding to change array
+      tempArr[x][1] = numAmt * amount[x];
+    } 
+  }
+
+  if(tempCng != 0)
+  {
+    insuff = true;
+  }
+
+  let openReg = [];
+  for(let x = tempArr.length-1; x >= 0; x--)
+  {
+    if(tempArr[x][1] != 0)
+    {
+      openReg.push(tempArr[x]);
+    }
+  }
+
+  for(let x = 0; x < cid.length; x++)
+  {
+    if(cid[x][1] != 0)
+    {
+      closed = false;
+      break;
+    }
+  }
+
+
+  if(insuff)
+  {
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  }
+  else if(closed)
+  {
+    return {status: "CLOSED", change: [...tempArr]};
+  }
+
+  return {status: "OPEN", change: [...openReg]};
+}
+
+console.log(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));

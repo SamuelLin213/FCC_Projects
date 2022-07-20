@@ -1,0 +1,24 @@
+function rot13(str) {
+  let decipher = "";
+  for(let x = 0; x < str.length; x++)
+  {
+    if(str.charCodeAt(x) >= 65 && str.charCodeAt(x) <= 90)
+    {
+      let orig = str.charCodeAt(x);
+      orig += 13;
+      if(orig > 90)
+      {
+        orig -= 26;
+      }
+      decipher = decipher.concat(String.fromCharCode(orig));
+    }
+    else
+    {
+      decipher = decipher.concat(str.at(x));
+    }
+  }
+
+  return decipher;
+}
+
+console.log(rot13("SERR PBQR PNZC"));
